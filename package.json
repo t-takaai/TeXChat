@@ -1,0 +1,23 @@
+{
+  "name": "texchat",
+  "version": "0.0.1",
+  "description": "Chat rendering with LaTeX",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitbucket.takaai.org/t-takaai/TeXChat.git"
+  },
+  "keywords": [
+    "latex",
+    "chat"
+  ],
+  "author": "Takayuki Takaai",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  }
+}
