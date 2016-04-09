@@ -9,3 +9,4 @@ Chat app rendering with LaTeX
 
 - express
 - socket.io
+- xss-filters

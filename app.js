@@ -1,6 +1,7 @@
 const app = require('express')();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
+const xssFilters = require('xss-filters');
 
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
@@ -8,6 +9,7 @@ app.get('/', function(req, res) {
 
 io.on('connection', function(socket) {
   socket.on('chat message', function(msg) {
+    msg = xssFilters.inHTMLData(msg);
     io.emit('chat message', msg);
   });
 });
